@@ -1,267 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AS Mod Hub</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-
-background:#0f1117;
-color:white;
-
-}
-
-header{
-
-background:linear-gradient(135deg,#6a11cb,#2575fc);
-
-padding:35px 20px;
-
-text-align:center;
-
-box-shadow:0 5px 20px rgba(0,0,0,.35);
-
-}
-
-header h1{
-
-font-size:35px;
-
-font-weight:700;
-
-}
-
-header p{
-
-margin-top:8px;
-
-opacity:.9;
-
-}
-
-.container{
-
-width:92%;
-
-max-width:1200px;
-
-margin:auto;
-
-}
-
-.search{
-
-margin:30px auto;
-
-}
-
-.search input{
-
-width:100%;
-
-padding:16px 20px;
-
-border:none;
-
-border-radius:14px;
-
-background:#1b1e27;
-
-color:white;
-
-font-size:16px;
-
-outline:none;
-
-}
-
-.categories{
-
-display:flex;
-
-gap:12px;
-
-overflow:auto;
-
-padding-bottom:12px;
-
-}
-
-.categories button{
-
-background:#1f2430;
-
-color:white;
-
-border:none;
-
-padding:12px 22px;
-
-border-radius:50px;
-
-cursor:pointer;
-
-transition:.3s;
-
-white-space:nowrap;
-
-}
-
-.categories button:hover{
-
-background:#2575fc;
-
-}
-
-.section-title{
-
-font-size:26px;
-
-margin:35px 0 20px;
-
-font-weight:600;
-
-}
-
-.grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-
-gap:20px;
-
-}
-
-.card{
-
-background:#1b1e27;
-
-border-radius:18px;
-
-overflow:hidden;
-
-transition:.35s;
-
-box-shadow:0 10px 25px rgba(0,0,0,.3);
-
-}
-
-.card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.card img{
-
-width:100%;
-
-height:170px;
-
-object-fit:cover;
-
-}
-
-.card-content{
-
-padding:18px;
-
-}
-
-.card h3{
-
-font-size:21px;
-
-margin-bottom:8px;
-
-}
-
-.card p{
-
-font-size:14px;
-
-opacity:.8;
-
-line-height:1.6;
-
-margin-bottom:18px;
-
-}
-
-.download{
-
-display:inline-block;
-
-background:#2575fc;
-
-color:white;
-
-padding:12px 22px;
-
-border-radius:10px;
-
-text-decoration:none;
-
-font-weight:600;
-
-transition:.3s;
-
-}
-
-.download:hover{
-
-background:#1b57c9;
-
-}
-
-.ad-box{
-
-margin:40px 0;
-
-background:#1b1e27;
-
-padding:35px;
-
-text-align:center;
-
-border-radius:15px;
-
-border:2px dashed #555;
-
-font-size:18px;
-
-color:#aaa;
-
-}
-
-footer{
-
-margin-top:60px;
-
-padding:35px;
-
-text-align:center;
-
-background:#111;
-
-color:#999;
-
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -277,255 +24,54 @@ color:#999;
 
 <div class="container">
 
-<div class="search">
+<input
+type="text"
+id="search"
+class="search"
+placeholder="Search Apps..."
+onkeyup="searchApps()">
 
-<input type="text" placeholder="Search Apps...">
+<div id="apps" class="apps"></div>
 
-</div>
+<div style="text-align:center;margin-top:35px;">
 
-<div class="categories">
+<a
+class="channel"
+href="https://whatsapp.com/channel/0029Vb8c7g68KMqjEwHGm30B"
+target="_blank">
 
-<button>All</button>
+Join Our WhatsApp Channel
 
-<button>Editing</button>
-
-<button>Premium Apps</button>
-
-<button>Tools</button>
-
-<button>Games</button>
-
-</div>
-
-<h2 class="section-title">🔥 Featured Apps</h2>
-
-<div class="grid"><div class="card">
-
-<img src="https://via.placeholder.com/600x350/2575fc/ffffff?text=Alight+Motion+Pro">
-
-<div class="card-content">
-
-<h3>Alight Motion Pro</h3>
-
-<p>Latest Premium Version with all Pro Features Unlocked.</p>
-
-<a href="#" class="download">Download</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://via.placeholder.com/600x350/8e44ad/ffffff?text=CapCut+Pro">
-
-<div class="card-content">
-
-<h3>CapCut Pro</h3>
-
-<p>No Watermark • Premium Templates • Latest Version.</p>
-
-<a href="#" class="download">Download</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://via.placeholder.com/600x350/e67e22/ffffff?text=KineMaster">
-
-<div class="card-content">
-
-<h3>KineMaster Premium</h3>
-
-<p>Export Without Watermark • All Assets Unlocked.</p>
-
-<a href="#" class="download">Download</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://via.placeholder.com/600x350/16a085/ffffff?text=Remini+Pro">
-
-<div class="card-content">
-
-<h3>Remini Pro</h3>
-
-<p>AI Photo Enhancer Premium Version.</p>
-
-<a href="#" class="download">Download</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://via.placeholder.com/600x350/c0392b/ffffff?text=Node+Video">
-
-<div class="card-content">
-
-<h3>Node Video Pro</h3>
-
-<p>Professional Video Editing Without Watermark.</p>
-
-<a href="#" class="download">Download</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://via.placeholder.com/600x350/2ecc71/ffffff?text=PicsArt+Gold">
-
-<div class="card-content">
-
-<h3>PicsArt Gold</h3>
-
-<p>Premium Editing Tools & Effects Unlocked.</p>
-
-<a href="#" class="download">Download</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="ad-box">
-
-📢 Google AdSense Banner (728×90)<br><br>
-
-Place Your Ad Code Here
-
-</div>
-
-<h2 class="section-title">⭐ Latest Uploads</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<img src="https://via.placeholder.com/600x350/f39c12/ffffff?text=SnapTube">
-
-<div class="card-content">
-
-<h3>SnapTube VIP</h3>
-
-<p>Download Videos from Multiple Platforms.</p>
-
-<a href="#" class="download">Download</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://via.placeholder.com/600x350/3498db/ffffff?text=MX+Player">
-
-<div class="card-content">
-
-<h3>MX Player Pro</h3>
-
-<p>Ad-Free Premium Media Player.</p>
-
-<a href="#" class="download">Download</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://via.placeholder.com/600x350/27ae60/ffffff?text=Spotify+Premium">
-
-<div class="card-content">
-
-<h3>Spotify Premium</h3>
-
-<p>Unlimited Music Experience.</p>
-
-<a href="#" class="download">Download</a>
-
-</div>
-
-</div>
-
-</div><div class="ad-box">
-📢 Google AdSense Square Ad (300×250)
-<br><br>
-Place Your Ad Code Here
-</div>
-
-</div>
-
-<footer>
-
-<h2>AS Mod Hub</h2>
-
-<p>
-Premium Apps • Useful Tools • Mods
-</p>
-
-<br>
-
-<a href="https://whatsapp.com/channel/YOUR_CHANNEL_LINK"
-style="
-display:inline-block;
-padding:14px 28px;
-background:#25D366;
-color:white;
-text-decoration:none;
-border-radius:12px;
-font-weight:600;
-">
-Join WhatsApp Channel
 </a>
 
-<br><br>
+</div>
 
-<p style="opacity:.7;">
-© 2026 AS Mod Hub. All Rights Reserved.
+<section style="margin-top:40px;">
+
+<h2>
+
+Latest Premium Apps
+
+</h2>
+
+<p style="margin-top:10px;opacity:.8;">
+
+Download Premium Apps, Mods and Useful Tools for Free.
+
 </p>
+
+</section><footer style="text-align:center;padding:40px 20px;color:#aaa;">
+
+<p>© 2026 AS Mod Hub</p>
+
+<p>Made with ❤️ by AS</p>
 
 </footer>
 
-<script>
+</div>
 
-const searchInput=document.querySelector(".search input");
-
-const cards=document.querySelectorAll(".card");
-
-searchInput.addEventListener("keyup",()=>{
-
-let value=searchInput.value.toLowerCase();
-
-cards.forEach(card=>{
-
-let title=card.querySelector("h3").innerText.toLowerCase();
-
-if(title.includes(value)){
-
-card.style.display="block";
-
-}else{
-
-card.style.display="none";
-
-}
-
-});
-
-});
-
-</script>
+<script src="script.js"></script>
 
 </body>
 
-  </html>
+</html>
